@@ -1,6 +1,10 @@
+sudo: required
 language: node_js
 node_js:
   - "8"
+
+addons:
+  chrome: stable
 
 cache:
   directories:
@@ -14,4 +18,4 @@ install:
 
 script:
   - npm run lint
-  - npm test -- --watch=false --code-coverage
+  - npm test -- --watch=false --code-coverage --browsers=ChromeHeadlessNoSandbox
