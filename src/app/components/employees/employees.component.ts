@@ -35,6 +35,7 @@ export class EmployeesComponent implements OnInit {
 
   ngOnInit() {
     this.employees.sort = this.sort;
+    console.log('Hola mundo');
   }
 
 }
