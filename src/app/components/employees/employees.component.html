@@ -37,7 +37,7 @@
         <mat-icon class="action-icon material-icons" [matTooltipPosition]="tooltipPosition" [matTooltipShowDelay]="500" matTooltip="View Employee Info">
           remove_red_eye
         </mat-icon>
-        <mat-icon class="action-icon material-icons" [matTooltipPosition]="tooltipPosition" [matTooltipShowDelay]="500" matTooltip="Delete Employee">
+        <mat-icon (click)="removeEmployee(element)" class="action-icon material-icons" [matTooltipPosition]="tooltipPosition" [matTooltipShowDelay]="500" matTooltip="Delete Employee">
           delete
         </mat-icon>
       </td>
