@@ -33,6 +33,10 @@ export class EmployeesComponent implements OnInit {
 
   constructor() { }
 
+  applyFilter(filterValue: string) {
+    this.employees.filter = filterValue.trim().toLowerCase();
+  }
+
   ngOnInit() {
     this.employees.sort = this.sort;
     console.log('Hola mundo');
