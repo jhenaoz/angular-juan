@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatSort, MatTableDataSource} from '@angular/material';
+import {MatSort, MatTableDataSource, TooltipPosition} from '@angular/material';
 
 export interface Employee {
   name: string;
@@ -21,25 +21,24 @@ const ELEMENT_DATA: Employee[] = [
   styleUrls: ['./employees.component.css']
 })
 export class EmployeesComponent implements OnInit {
-
+  tooltipPosition: TooltipPosition = 'above';
   displayedColumns: string[] = [
     'name',
     'age',
     'username',
-    'hireDate'
+    'hireDate',
+    'actions'
   ];
   employees = new MatTableDataSource(ELEMENT_DATA);
   @ViewChild(MatSort) sort: MatSort;
 
   constructor() { }
 
+  ngOnInit() {
+    this.employees.sort = this.sort;
+  }
+
   applyFilter(filterValue: string) {
     this.employees.filter = filterValue.trim().toLowerCase();
   }
-
-  ngOnInit() {
-    this.employees.sort = this.sort;
-    console.log('Hola mundo');
-  }
-
 }
