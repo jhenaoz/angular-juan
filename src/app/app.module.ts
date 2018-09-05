@@ -2,7 +2,17 @@ import { NgModule } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTableModule, MatSortModule, MatFormFieldModule, MatInputModule, MatGridListModule } from '@angular/material';
+
+import {
+  MatButtonModule,
+  MatFormFieldModule,
+  MatGridListModule,
+  MatInputModule,
+  MatIconModule,
+  MatSortModule,
+  MatTableModule,
+  MatTooltipModule
+} from '@angular/material';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,10 +22,11 @@ import { AppComponent } from './app.component';
 import { EmployeesComponent } from './components/employees/employees.component';
 import { CreateEmployeeComponent } from './components/create-employee/create-employee.component';
 
-
-
 @NgModule({
   imports: [
+    MatIconModule,
+    MatButtonModule,
+    MatTooltipModule,
     MatGridListModule,
     MatTableModule,
     MatSortModule,
@@ -23,6 +34,9 @@ import { CreateEmployeeComponent } from './components/create-employee/create-emp
     MatInputModule
   ],
   exports: [
+    MatIconModule,
+    MatButtonModule,
+    MatTooltipModule,
     MatGridListModule,
     MatTableModule,
     MatSortModule,

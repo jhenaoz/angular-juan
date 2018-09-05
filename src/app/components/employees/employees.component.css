@@ -3,6 +3,19 @@ table {
 }
 
 .mat-form-field {
-  font-size: 14px;
   width: 100%;
+}
+
+.action-icon {
+  margin: 2px;
+  cursor: pointer;
+}
+
+.action-icon:hover {
+  background-color:rgb(200, 200, 200);
+  border-radius: 50%;
+}
+
+.employees-section table {
+  margin-bottom: 1.5rem;
 }
