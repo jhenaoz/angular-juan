@@ -16,6 +16,8 @@ import {
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './reducers/employee.reducer';
 
 // Components
 import { AppComponent } from './app.component';
@@ -58,7 +60,10 @@ export class MaterialModule {}
     ReactiveFormsModule,
     AppRoutingModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    StoreModule.forRoot({
+      employee: reducer
+    })
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue : '/' }
